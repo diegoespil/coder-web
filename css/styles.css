@@ -1,0 +1,378 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: linear-gradient(to bottom right, #ffffff, #ce54da);
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    background-repeat: no-repeat; /* Evita la repetición del fondo */
+    background-attachment: fixed; /* Fija el fondo en su posición */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 900px;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+/* estilo para el menu */
+
+.grid-container-header {
+    border-bottom: 1px solid black;
+    top: 0; /* Lo fija a la parte superior de la ventana */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 3rem
+    
+}
+
+.grid-container-menu {
+    border: 1px solid black;
+}
+
+
+/* fin estilo menu*/
+
+
+/* estilos para el logo */
+
+.grid-container-logo {
+    /*align-self: center;*/
+}
+
+.logo  {
+    width: 80px;
+}
+
+
+/* fin estilos para el logo*/
+
+/* estilos para el icono del perfil*/
+
+.perfil {
+    width: 30px;;
+}
+/* fin estilos para el icono del perfil*/
+
+/* estilos para la img del carousel*/
+
+.img-carousel {
+
+    height: 30rem;
+}
+
+/* fin estilos para la img del carousel*/
+
+/* estilos para la primer section del index */
+
+
+#ppal-section {
+    position: relative;
+    height: calc(100vh - 6.5em);
+    
+}
+
+.imagen-fondo {
+    position: relative;
+    padding: auto;
+}
+
+
+.texto-encima {
+    position: absolute;
+    top: 50%; /* Coloca el texto en la mitad superior */
+    left: 50%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra verticalmente y horizontalmente */
+    color: rgb(83, 55, 79); /* Color del texto, asegúrate de que sea visible sobre la imagen */
+    text-align: center;
+    width: 15em;
+}
+
+.texto-encima h1 {
+    font-size: 2rem;
+}
+
+
+/* fin de estilo para la imagen principal del index*/
+
+/* estilos para la seccion de los trabajos realizados en el index*/
+
+#trabajos-realizados {
+    display: flex;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    flex-direction: column; /* Columna para colocar el encabezado encima de los divs */
+    
+}
+
+#trabajos-realizados h2 {
+    margin-bottom: 2em;
+}
+
+.trabajos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trabajos > div {
+    flex: 1; /* Hace que los divs tengan el mismo ancho */
+    border: 1px solid #000; /* Estilo de borde (opcional) */
+    padding: 20px; /* Agrega relleno (opcional) */
+    text-align: center; /* Alinea el texto al centro dentro de los divs */
+}
+
+
+/* fin de estilos para la seccion de los trabajos realizados del index*/
+
+/* estilos para la ubicacion en el index*/
+
+#ubicacion h2 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#ubicacion iframe{
+    width: 100%;
+}
+
+/* fin estilos para la ubicacion en el index*/
+
+/* estilos para los servicios */
+
+#servicios {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.servicio1, .servicio2, .servicio3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.servicio1-imagen, .servicio2-imagen, .servicio3-imagen {
+    width: 100%; /* Para que la imagen se ajuste al tamaño del contenedor */
+    height: auto;
+    display: block;
+    max-width: 50%; /* Imagen que no ocupa más del 50% del ancho de la pantalla */
+    overflow: hidden; /* Para recortar la imagen si es demasiado grande */
+}
+
+
+
+
+/* fin estilos de los servicios*/
+
+/* estilos para la seccion de reservas */
+
+.reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-reserva {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.reserva-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid black;
+    height: 20rem;
+    width: 60vh;
+    font-size: 1.2rem;
+}
+
+.reserva-step .formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reserva-step .formulario-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reserva-step select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.reserva-step button {
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #dd77e0;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.formulario-buttons .btn-enviar-reserva {
+    display: none;
+}
+
+.fechas-disponibles {
+    display: none;
+}
+
+.fechas-disponibles .active {
+    display: flex;
+    flex-direction: column;
+}
+
+.horarios-disponibles {
+    display: none;
+}
+
+.horarios-disponibles .active {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-fechas {
+    display: none;
+}
+
+#btn-fechas .active {
+    display: flex;
+}
+
+#btn-horarios {
+    display: none;
+}
+
+#btn-horarios .active {
+    display: flex;
+}
+
+/* fin de estilos para la seccion de reservas*/
+
+/* estilos para las preguntas frecuentes */
+#preguntas-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#preguntas-container .titulo-preguntas {
+    margin-top:  50px;
+    margin-bottom: 40px;
+}
+
+#preguntas-container .preguntas {
+    width: 60%;
+}
+
+.preguntas .pregunta-item {
+    margin-bottom:  30px;
+}
+/* fin estilos para las preguntas frecuentes */
+
+/* estilos para la pagina de contacto */
+
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto-titulo {
+    font-size: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contacto-parrafo {
+    width: 100vh;
+    margin-bottom: 50px;
+}
+
+.contacto-form {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-form-elements {
+    margin-bottom: 10px;
+}
+
+.contacto-form-elements .enviar-contacto {
+    width: 150px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    padding: 10px; /* Relleno interno del botón */
+}
+
+/* fin estilos para la pagina de contacto */
+
+
+/* estilos para el footer */
+
+footer {
+    width: 100%;
+    border-top: 1px solid black;
+    margin-top: auto;
+}
+
+.text-coopirygth {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.social-media img{
+    float: right;
+    margin-right: 30px; /* Ajusta el margen del icono */
+    margin-bottom: 30px;
+}
+
+.img-whatsapp {
+    width: 3rem;
+}
+
+.logo-whatsapp {
+    
+    display: inline-block;
+    
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+}
+
+/* fin de estilos para el footer*/
+
+/* Media Query para ajustar el tamaño del texto en pantallas más pequeñas */
+@media only screen and (min-width: 320px) {
+    h1, h2, h3, p {
+        font-size: 14px; /* Tamaño de texto más pequeño para pantallas más pequeñas */
+    }
+}
+
+@media only screen and (min-width: 780px) {
+    h1, h2, h3, p {
+        font-size: 12px; /* Tamaño de texto aún más pequeño para pantallas muy pequeñas */
+    }
+}
