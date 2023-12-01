@@ -26,19 +26,16 @@ ul {
 }
 
 
-/* estilo para el menu */
-
-.grid-container-header {
-    border-bottom: 1px solid black;
-    top: 0; /* Lo fija a la parte superior de la ventana */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5rem 3rem
-    
+hr {
+    border: 1px solid #000; /* Cambia el color y grosor de la línea según tus preferencias */
+    margin: 20px 0; /* Agrega márgenes para ajustar el espacio alrededor de la línea */
 }
 
-.grid-container-menu {
-    border: 1px solid black;
+
+/* estilo para el menu */
+
+a:hover {
+    font-size: 1.2rem;
 }
 
 
@@ -47,9 +44,7 @@ ul {
 
 /* estilos para el logo */
 
-.grid-container-logo {
-    /*align-self: center;*/
-}
+
 
 .logo  {
     width: 80px;
@@ -58,38 +53,36 @@ ul {
 
 /* fin estilos para el logo*/
 
-/* estilos para el icono del perfil*/
 
-.perfil {
-    width: 30px;;
-}
-/* fin estilos para el icono del perfil*/
-
-/* estilos para la img del carousel*/
-
-.img-carousel {
-
-    height: 30rem;
-}
-
-/* fin estilos para la img del carousel*/
 
 /* estilos para la primer section del index */
 
 
-#ppal-section {
-    position: relative;
-    height: calc(100vh - 6.5em);
-    
+.first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
 }
 
-.imagen-fondo {
-    position: relative;
-    padding: auto;
+.first-section h1 {
+    font-size: 3rem;
+    text-align: center;
 }
 
 
-.texto-encima {
+.imagen-ppal-der {
+    border: 1px solid black;
+    width: 30rem;
+    height: 35rem;
+}
+
+.imagen-ppal-der img {
+    width: 100%;
+}
+
+
+.texto-ppal {
     position: absolute;
     top: 50%; /* Coloca el texto en la mitad superior */
     left: 50%; /* Coloca el texto en el centro horizontal */
@@ -99,7 +92,7 @@ ul {
     width: 15em;
 }
 
-.texto-encima h1 {
+.texto-ppal h1 {
     font-size: 2rem;
 }
 
@@ -107,30 +100,36 @@ ul {
 /* fin de estilo para la imagen principal del index*/
 
 /* estilos para la seccion de los trabajos realizados en el index*/
-
 #trabajos-realizados {
-    display: flex;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    flex-direction: column; /* Columna para colocar el encabezado encima de los divs */
-    
-}
-
-#trabajos-realizados h2 {
-    margin-bottom: 2em;
+    height: 35rem;
 }
 
 .trabajos {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.trabajos > div {
-    flex: 1; /* Hace que los divs tengan el mismo ancho */
-    border: 1px solid #000; /* Estilo de borde (opcional) */
-    padding: 20px; /* Agrega relleno (opcional) */
-    text-align: center; /* Alinea el texto al centro dentro de los divs */
+.trabajo {
+    background-color: rgb(255, 255, 255);
+    width: 20rem;
+    height: 31rem;
 }
+
+.trabajos img {
+    width: 100%;
+}
+
+.parrafo-trabajo {
+    text-align: center;
+    margin: 2rem;
+}
+
+ .titulo-trabajos {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+ }
 
 
 /* fin de estilos para la seccion de los trabajos realizados del index*/
@@ -139,8 +138,8 @@ ul {
 
 #ubicacion h2 {
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    font-size: 2rem;
+    margin: 2rem;
 }
 
 #ubicacion iframe{
