@@ -9,15 +9,18 @@
 
 body {
     background: linear-gradient(to bottom right, #ffffff, #ce54da);
-    background-size: cover; /* Ajusta el tamaño del fondo */
-    background-repeat: no-repeat; /* Evita la repetición del fondo */
-    background-attachment: fixed; /* Fija el fondo en su posición */
-    display: flex;
+    background-size: cover;
+    /* Ajusta el tamaño del fondo */
+    background-repeat: no-repeat;
+    /* Evita la repetición del fondo */
+    background-attachment: fixed;
+    /* Fija el fondo en su posición */
+    /*display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-width: 900px;
     margin: 0;
-    padding: 0;
+    padding: 0;*/
 }
 
 
@@ -27,8 +30,10 @@ ul {
 
 
 hr {
-    border: 1px solid #000; /* Cambia el color y grosor de la línea según tus preferencias */
-    margin: 20px 0; /* Agrega márgenes para ajustar el espacio alrededor de la línea */
+    border: 1px solid #000;
+    /* Cambia el color y grosor de la línea según tus preferencias */
+    margin: 20px 0;
+    /* Agrega márgenes para ajustar el espacio alrededor de la línea */
 }
 
 
@@ -46,7 +51,7 @@ a:hover {
 
 
 
-.logo  {
+.logo {
     width: 80px;
 }
 
@@ -84,10 +89,14 @@ a:hover {
 
 .texto-ppal {
     position: absolute;
-    top: 50%; /* Coloca el texto en la mitad superior */
-    left: 50%; /* Coloca el texto en el centro horizontal */
-    transform: translate(-50%, -50%); /* Centra verticalmente y horizontalmente */
-    color: rgb(83, 55, 79); /* Color del texto, asegúrate de que sea visible sobre la imagen */
+    top: 50%;
+    /* Coloca el texto en la mitad superior */
+    left: 50%;
+    /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%);
+    /* Centra verticalmente y horizontalmente */
+    color: rgb(83, 55, 79);
+    /* Color del texto, asegúrate de que sea visible sobre la imagen */
     text-align: center;
     width: 15em;
 }
@@ -100,20 +109,19 @@ a:hover {
 /* fin de estilo para la imagen principal del index*/
 
 /* estilos para la seccion de los trabajos realizados en el index*/
-#trabajos-realizados {
-    height: 35rem;
-}
 
-.trabajos {
+
+.lista-trabajos {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .trabajo {
     background-color: rgb(255, 255, 255);
-    width: 20rem;
-    height: 31rem;
+    width: 17.6rem;
+    height: 100%;
 }
 
 .trabajos img {
@@ -125,11 +133,11 @@ a:hover {
     margin: 2rem;
 }
 
- .titulo-trabajos {
+.titulo-trabajos {
     text-align: center;
     font-size: 2rem;
     margin: 2rem;
- }
+}
 
 
 /* fin de estilos para la seccion de los trabajos realizados del index*/
@@ -142,7 +150,7 @@ a:hover {
     margin: 2rem;
 }
 
-#ubicacion iframe{
+#ubicacion iframe {
     width: 100%;
 }
 
@@ -156,18 +164,25 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.servicio1, .servicio2, .servicio3 {
+.servicio1,
+.servicio2,
+.servicio3 {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.servicio1-imagen, .servicio2-imagen, .servicio3-imagen {
-    width: 100%; /* Para que la imagen se ajuste al tamaño del contenedor */
+.servicio1-imagen,
+.servicio2-imagen,
+.servicio3-imagen {
+    width: 100%;
+    /* Para que la imagen se ajuste al tamaño del contenedor */
     height: auto;
     display: block;
-    max-width: 50%; /* Imagen que no ocupa más del 50% del ancho de la pantalla */
-    overflow: hidden; /* Para recortar la imagen si es demasiado grande */
+    max-width: 50%;
+    /* Imagen que no ocupa más del 50% del ancho de la pantalla */
+    overflow: hidden;
+    /* Para recortar la imagen si es demasiado grande */
 }
 
 
@@ -207,7 +222,7 @@ a:hover {
     flex-direction: column;
 }
 
-.reserva-step .formulario-buttons{
+.reserva-step .formulario-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,14 +284,14 @@ a:hover {
 /* fin de estilos para la seccion de reservas*/
 
 /* estilos para las preguntas frecuentes */
-#preguntas-container{
+#preguntas-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #preguntas-container .titulo-preguntas {
-    margin-top:  50px;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 
@@ -285,8 +300,9 @@ a:hover {
 }
 
 .preguntas .pregunta-item {
-    margin-bottom:  30px;
+    margin-bottom: 30px;
 }
+
 /* fin estilos para las preguntas frecuentes */
 
 /* estilos para la pagina de contacto */
@@ -321,9 +337,12 @@ a:hover {
 }
 
 .contacto-form-elements .enviar-contacto {
-    width: 150px; /* Ancho del botón */
-    height: 40px; /* Altura del botón */
-    padding: 10px; /* Relleno interno del botón */
+    width: 150px;
+    /* Ancho del botón */
+    height: 40px;
+    /* Altura del botón */
+    padding: 10px;
+    /* Relleno interno del botón */
 }
 
 /* fin estilos para la pagina de contacto */
@@ -342,9 +361,10 @@ footer {
     text-align: center;
 }
 
-.social-media img{
+.social-media img {
     float: right;
-    margin-right: 30px; /* Ajusta el margen del icono */
+    margin-right: 30px;
+    /* Ajusta el margen del icono */
     margin-bottom: 30px;
 }
 
@@ -353,25 +373,33 @@ footer {
 }
 
 .logo-whatsapp {
-    
     display: inline-block;
-    
     position: fixed;
-    bottom: 4rem;
-    right: 4rem;
+    bottom: 2rem;
+    right: 2rem;
 }
 
 /* fin de estilos para el footer*/
 
 /* Media Query para ajustar el tamaño del texto en pantallas más pequeñas */
 @media only screen and (min-width: 320px) {
-    h1, h2, h3, p {
-        font-size: 14px; /* Tamaño de texto más pequeño para pantallas más pequeñas */
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 14px;
+        /* Tamaño de texto más pequeño para pantallas más pequeñas */
     }
 }
 
 @media only screen and (min-width: 780px) {
-    h1, h2, h3, p {
-        font-size: 12px; /* Tamaño de texto aún más pequeño para pantallas muy pequeñas */
+
+    h1,
+    h2,
+    h3,
+    p {
+        font-size: 12px;
+        /* Tamaño de texto aún más pequeño para pantallas muy pequeñas */
     }
 }
