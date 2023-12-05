@@ -39,8 +39,9 @@ hr {
 
 /* estilo para el menu */
 
-a:hover {
-    font-size: 1.2rem;
+.nav-link {
+    font-size: 1.2rem ;
+    color: #000;
 }
 
 
@@ -129,6 +130,8 @@ a:hover {
 }
 
 .parrafo-trabajo {
+    font-size: 1rem;
+    color: #000;
     text-align: center;
     margin: 2rem;
 }
@@ -158,34 +161,36 @@ a:hover {
 
 /* estilos para los servicios */
 
-#servicios {
+.listado-servicios {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.servicio1,
-.servicio2,
-.servicio3 {
+.servicio-descripcion {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.servicio1-imagen,
-.servicio2-imagen,
-.servicio3-imagen {
+.servicio{
     width: 100%;
-    /* Para que la imagen se ajuste al tamaño del contenedor */
-    height: auto;
-    display: block;
-    max-width: 50%;
-    /* Imagen que no ocupa más del 50% del ancho de la pantalla */
-    overflow: hidden;
-    /* Para recortar la imagen si es demasiado grande */
 }
 
+.servicio img {
+    width: 100%;
+}
 
+.titulo-servicio {
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.texto-servicio {
+    color: #000;
+    font-size: 2rem;
+}
 
 
 /* fin estilos de los servicios*/
@@ -356,14 +361,15 @@ footer {
     margin-top: auto;
 }
 
-.text-coopirygth {
-    padding-top: 10px;
+.text-coopirygth h4{
+    font-size: 1.2rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
 .social-media img {
     float: right;
-    margin-right: 30px;
+    margin-right: 5.2rem;
     /* Ajusta el margen del icono */
     margin-bottom: 30px;
 }
@@ -382,24 +388,47 @@ footer {
 /* fin de estilos para el footer*/
 
 /* Media Query para ajustar el tamaño del texto en pantallas más pequeñas */
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 450px) {
 
-    h1,
-    h2,
-    h3,
-    p {
-        font-size: 14px;
-        /* Tamaño de texto más pequeño para pantallas más pequeñas */
+    
+
+    .titulo-servicio {
+        font-size: 0.8rem;
+    }
+
+    .texto-servicio {
+        font-size: 0.5rem;
+    }
+
+    .img-whatsapp {
+        width: 2rem;
     }
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (maxn-width: 780px) {
 
-    h1,
-    h2,
-    h3,
-    p {
-        font-size: 12px;
-        /* Tamaño de texto aún más pequeño para pantallas muy pequeñas */
+    
+
+    .titulo-servicio {
+        font-size: 1.2rem;
     }
+
+    .texto-servicio {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    
+
+    .titulo-servicio {
+        font-size: 2rem;
+    }
+
+    .texto-servicio {
+        font-size: 1.5rem;
+    }
+
 }
