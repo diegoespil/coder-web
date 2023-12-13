@@ -1,0 +1,22 @@
+/* estilos para las preguntas frecuentes */
+#preguntas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.titulo-preguntas {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.preguntas {
+    width: 60%;
+}
+
+.pregunta-item {
+    margin-bottom: 30px;
+}
+
+/* fin estilos para las preguntas frecuentes */

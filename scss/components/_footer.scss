@@ -1,0 +1,38 @@
+@import "../base/variables";
+@import "../base/extends";
+
+/* estilos para el footer */
+
+footer {
+   @extend %footer;
+}
+
+.text-coopirygth {
+    h4  {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+.social-media {
+    img {
+        float: right;
+        margin-right: 5.2rem;
+        /* Ajusta el margen del icono */
+        margin-bottom: 30px;
+    }
+}
+
+.img-whatsapp {
+    width: 3rem;
+}
+
+.logo-whatsapp {
+    display: inline-block;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+/* fin de estilos para el footer*/

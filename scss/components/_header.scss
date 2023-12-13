@@ -1,0 +1,13 @@
+@import "../base/variables";
+@import "../base/maps";
+
+.nav-link {
+    font-size: map-get($nav-link, tamanio);
+    color: $color-black;
+}
+
+
+.logo {
+    width: 80px;
+}
+

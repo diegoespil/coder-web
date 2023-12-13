@@ -1,0 +1,35 @@
+@import "./components/header";
+@import "./components/index";
+@import "./components/servicios";
+@import "./components/reservas";
+@import "./components/preguntas";
+@import "./components/contacto";
+@import "./components/footer";
+@import "./components/mediaqueries";
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: linear-gradient(to bottom right, #ffffff, #ce54da);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+hr {
+    border: 1px solid #000;
+    margin: 20px 0;
+}

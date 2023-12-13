@@ -1,0 +1,37 @@
+/* estilos para los servicios */
+
+.listado-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.servicio-descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicio{
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+
+}
+
+
+.titulo-servicio {
+    font-size: 3rem;
+    color: $color-black;
+    font-weight: bold;
+}
+
+.texto-servicio {
+    color: $color-black;
+    font-size: 2rem;
+}
+
+
+/* fin estilos de los servicios*/

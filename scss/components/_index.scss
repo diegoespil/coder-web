@@ -1,0 +1,77 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+/* estilos para la primer section del index */
+
+.first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+
+
+
+/* fin de estilo para la imagen principal del index*/
+
+/* estilos para la seccion de los trabajos realizados en el index*/
+
+
+.lista-trabajos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.trabajo {
+    @include card(17.6rem,100%);
+    background-color: rgb(255, 255, 255);
+}
+
+.trabajos {
+    
+    img {
+        width: 100%;
+    }
+}
+
+.parrafo-trabajo {
+    font-size: 1rem;
+    color: $color-black;
+    text-align: center;
+    margin: 2rem;
+}
+
+.titulo-trabajos {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+
+/* fin de estilos para la seccion de los trabajos realizados del index*/
+
+/* estilos para la ubicacion en el index*/
+
+#ubicacion {
+    
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
+/* fin estilos para la ubicacion en el index*/

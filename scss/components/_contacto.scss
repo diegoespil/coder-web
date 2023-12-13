@@ -1,0 +1,41 @@
+/* estilos para la pagina de contacto */
+
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacto-titulo {
+    font-size: 1rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contacto-parrafo {
+    width: 100vh;
+    margin-bottom: 50px;
+}
+
+.contacto-form {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-form-elements {
+    margin-bottom: 10px;
+}
+
+.enviar-contacto {
+    width: 150px;
+    /* Ancho del botón */
+    height: 40px;
+    /* Altura del botón */
+    padding: 10px;
+    /* Relleno interno del botón */
+}
+
+/* fin estilos para la pagina de contacto */

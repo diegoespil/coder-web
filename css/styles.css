@@ -1,434 +1,370 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-body {
-    background: linear-gradient(to bottom right, #ffffff, #ce54da);
-    background-size: cover;
-    /* Ajusta el tamaño del fondo */
-    background-repeat: no-repeat;
-    /* Evita la repetición del fondo */
-    background-attachment: fixed;
-    /* Fija el fondo en su posición */
-    /*display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 900px;
-    margin: 0;
-    padding: 0;*/
-}
-
-
-ul {
-    list-style: none;
-}
-
-
-hr {
-    border: 1px solid #000;
-    /* Cambia el color y grosor de la línea según tus preferencias */
-    margin: 20px 0;
-    /* Agrega márgenes para ajustar el espacio alrededor de la línea */
-}
-
-
-/* estilo para el menu */
-
+@charset "UTF-8";
 .nav-link {
-    font-size: 1.2rem ;
-    color: #000;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.918);
 }
-
-
-/* fin estilo menu*/
-
-
-/* estilos para el logo */
-
-
 
 .logo {
-    width: 80px;
+  width: 80px;
 }
-
-
-/* fin estilos para el logo*/
-
-
 
 /* estilos para la primer section del index */
-
-
 .first-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
 }
-
 .first-section h1 {
-    font-size: 3rem;
-    text-align: center;
+  font-size: 3rem;
+  text-align: center;
 }
-
-
-.imagen-ppal-der {
-    border: 1px solid black;
-    width: 30rem;
-    height: 35rem;
-}
-
-.imagen-ppal-der img {
-    width: 100%;
-}
-
-
-.texto-ppal {
-    position: absolute;
-    top: 50%;
-    /* Coloca el texto en la mitad superior */
-    left: 50%;
-    /* Coloca el texto en el centro horizontal */
-    transform: translate(-50%, -50%);
-    /* Centra verticalmente y horizontalmente */
-    color: rgb(83, 55, 79);
-    /* Color del texto, asegúrate de que sea visible sobre la imagen */
-    text-align: center;
-    width: 15em;
-}
-
-.texto-ppal h1 {
-    font-size: 2rem;
-}
-
 
 /* fin de estilo para la imagen principal del index*/
-
 /* estilos para la seccion de los trabajos realizados en el index*/
-
-
 .lista-trabajos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .trabajo {
-    background-color: rgb(255, 255, 255);
-    width: 17.6rem;
-    height: 100%;
+  width: 17.6rem;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
 }
 
 .trabajos img {
-    width: 100%;
+  width: 100%;
 }
 
 .parrafo-trabajo {
-    font-size: 1rem;
-    color: #000;
-    text-align: center;
-    margin: 2rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.918);
+  text-align: center;
+  margin: 2rem;
 }
 
 .titulo-trabajos {
-    text-align: center;
-    font-size: 2rem;
-    margin: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
 }
-
 
 /* fin de estilos para la seccion de los trabajos realizados del index*/
-
 /* estilos para la ubicacion en el index*/
-
 #ubicacion h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem;
 }
-
 #ubicacion iframe {
-    width: 100%;
+  width: 100%;
 }
 
 /* fin estilos para la ubicacion en el index*/
-
 /* estilos para los servicios */
-
 .listado-servicios {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .servicio-descripcion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.servicio{
-    width: 100%;
+.servicio {
+  width: 100%;
 }
-
 .servicio img {
-    width: 100%;
+  width: 100%;
 }
 
 .titulo-servicio {
-    font-size: 3rem;
-    color: #000;
-    font-weight: bold;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.918);
+  font-weight: bold;
 }
 
 .texto-servicio {
-    color: #000;
-    font-size: 2rem;
+  color: rgba(0, 0, 0, 0.918);
+  font-size: 2rem;
 }
 
-
 /* fin estilos de los servicios*/
-
 /* estilos para la seccion de reservas */
-
 .reserva {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .titulo-reserva {
-    margin-top: 50px;
-    margin-bottom: 100px;
+  text-align: center;
+  margin: 2rem;
 }
 
 .reserva-step {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border: 1px solid black;
-    height: 20rem;
-    width: 60vh;
-    font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 20rem;
+  width: 70%;
+  font-size: 1.2rem;
 }
-
 .reserva-step .formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .reserva-step .formulario-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .reserva-step select {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
 }
-
 .reserva-step button {
-    font-size: 1rem;
-    border-radius: 5px;
-    background-color: #dd77e0;
-    height: 30px;
-    margin-top: 50px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #dd77e0;
+  height: 30px;
+  margin-top: 50px;
 }
 
 .formulario-buttons .btn-enviar-reserva {
-    display: none;
+  display: none;
 }
 
 .fechas-disponibles {
-    display: none;
+  display: none;
 }
-
 .fechas-disponibles .active {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .horarios-disponibles {
-    display: none;
+  display: none;
 }
-
 .horarios-disponibles .active {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #btn-fechas {
-    display: none;
+  display: none;
 }
-
 #btn-fechas .active {
-    display: flex;
+  display: flex;
 }
 
 #btn-horarios {
-    display: none;
+  display: none;
 }
-
 #btn-horarios .active {
-    display: flex;
+  display: flex;
 }
 
 /* fin de estilos para la seccion de reservas*/
-
 /* estilos para las preguntas frecuentes */
 #preguntas-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#preguntas-container .titulo-preguntas {
-    margin-top: 50px;
-    margin-bottom: 40px;
+.titulo-preguntas {
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
-#preguntas-container .preguntas {
-    width: 60%;
+.preguntas {
+  width: 60%;
 }
 
-.preguntas .pregunta-item {
-    margin-bottom: 30px;
+.pregunta-item {
+  margin-bottom: 30px;
 }
 
 /* fin estilos para las preguntas frecuentes */
-
 /* estilos para la pagina de contacto */
-
 .contacto-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .contacto-titulo {
-    font-size: 1rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  font-size: 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contacto-parrafo {
-    width: 100vh;
-    margin-bottom: 50px;
+  width: 100vh;
+  margin-bottom: 50px;
 }
 
 .contacto-form {
-    width: 20em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contacto-form-elements {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.contacto-form-elements .enviar-contacto {
-    width: 150px;
-    /* Ancho del botón */
-    height: 40px;
-    /* Altura del botón */
-    padding: 10px;
-    /* Relleno interno del botón */
+.enviar-contacto {
+  width: 150px;
+  /* Ancho del botón */
+  height: 40px;
+  /* Altura del botón */
+  padding: 10px;
+  /* Relleno interno del botón */
 }
 
 /* fin estilos para la pagina de contacto */
-
-
-/* estilos para el footer */
-
 footer {
-    width: 100%;
-    border-top: 1px solid black;
-    margin-top: auto;
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: auto;
 }
 
-.text-coopirygth h4{
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    text-align: center;
+/* estilos para el footer */
+.text-coopirygth h4 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .social-media img {
-    float: right;
-    margin-right: 5.2rem;
-    /* Ajusta el margen del icono */
-    margin-bottom: 30px;
+  float: right;
+  margin-right: 5.2rem;
+  /* Ajusta el margen del icono */
+  margin-bottom: 30px;
 }
 
 .img-whatsapp {
-    width: 3rem;
+  width: 3rem;
 }
 
 .logo-whatsapp {
-    display: inline-block;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+  display: inline-block;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 /* fin de estilos para el footer*/
-
 /* Media Query para ajustar el tamaño del texto en pantallas más pequeñas */
-@media only screen and (max-width: 450px) {
-
-    
-
-    .titulo-servicio {
-        font-size: 0.8rem;
-    }
-
-    .texto-servicio {
-        font-size: 0.5rem;
-    }
-
-    .img-whatsapp {
-        width: 2rem;
-    }
+@media only screen and (max-width: 320px) {
+  .first-section h1 {
+    font-size: 2rem;
+  }
+  .titulo-servicio {
+    font-size: 0.8rem;
+  }
+  .texto-servicio {
+    font-size: 0.5rem;
+  }
+  .img-whatsapp {
+    width: 2rem;
+  }
+  select {
+    padding: 0;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .first-section h1 {
+    font-size: 2.1rem;
+  }
+  .titulo-servicio {
+    font-size: 0.9rem;
+  }
+  .texto-servicio {
+    font-size: 0.6rem;
+  }
+  .img-whatsapp {
+    width: 2.1rem;
+  }
+  .reserva-step select {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .first-section h1 {
+    font-size: 2.2rem;
+  }
+  .titulo-servicio {
+    font-size: 1rem;
+  }
+  .texto-servicio {
+    font-size: 0.8rem;
+  }
+  .img-whatsapp {
+    width: 2.2rem;
+  }
+  select {
+    font-size: 1.1rem;
+    height: 50%;
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .first-section h1 {
+    font-size: 2.3rem;
+  }
+  .titulo-servicio {
+    font-size: 1.2rem;
+  }
+  .texto-servicio {
+    font-size: 1rem;
+  }
+  .img-whatsapp {
+    width: 2.3rem;
+  }
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media only screen and (maxn-width: 780px) {
-
-    
-
-    .titulo-servicio {
-        font-size: 1.2rem;
-    }
-
-    .texto-servicio {
-        font-size: 1rem;
-    }
-
+body {
+  background: linear-gradient(to bottom right, #ffffff, #ce54da);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media only screen and (max-width: 1200px) {
-
-    
-
-    .titulo-servicio {
-        font-size: 2rem;
-    }
-
-    .texto-servicio {
-        font-size: 1.5rem;
-    }
-
+ul {
+  list-style: none;
 }
+
+hr {
+  border: 1px solid #000;
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

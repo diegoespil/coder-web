@@ -1,0 +1,97 @@
+/* estilos para la seccion de reservas */
+
+.reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-reserva {
+    text-align: center;
+    margin: 2rem;
+}
+
+.reserva-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 20rem;
+    width: 70%;
+    font-size: 1.2rem;
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .formulario-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    select {
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    button {
+        font-size: 1rem;
+        border-radius: 5px;
+        background-color: #dd77e0;
+        height: 30px;
+        margin-top: 50px;
+    }
+}
+
+
+.formulario-buttons .btn-enviar-reserva {
+    display: none;
+}
+
+.fechas-disponibles {
+    display: none;
+
+    .active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.horarios-disponibles {
+    display: none;
+
+    .active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+#btn-fechas {
+    display: none;
+
+    .active {
+        display: flex;
+    }
+}
+
+
+#btn-horarios {
+    display: none;
+
+    .active {
+        display: flex;
+    }
+}
+
+
+/* fin de estilos para la seccion de reservas*/
