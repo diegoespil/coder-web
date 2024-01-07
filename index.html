@@ -11,8 +11,8 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <!-- Estilo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <title>Pink Nails AD</title>
 </head>
@@ -21,7 +21,7 @@
 
     <!-- Header -->
     <header>
-        <nav class="d-flex navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="d-flex navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <!-- Logo -->
                 <div class="p-2">
@@ -29,28 +29,37 @@
                 </div>
                 <!-- Menu navbar-->
                 <div class="p-2">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav justify-content-center">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/servicios.html">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/reservas.html">Reservas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/preguntas_frecuentes.html">Preg. Frecuentes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/contacto.html">Contactanos</a>
-                            </li>
-                        </ul>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Pink Nails</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/servicios.html">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/reservas.html">Reservas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/preguntas_frecuentes.html">Preg. Frecuentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/contacto.html">Contactanos</a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
 
@@ -63,7 +72,7 @@
         <!-- Seccion principal -->
         <section id="ppal-section">
             <div class="first-section">
-                <h1>Una buena manicura es todo lo que necesitas en un día difícil.</h1>
+                <h1>Una buena manicura es todo lo que necesitas en un día difícil..</h1>
             </div>
         </section>
         <hr>
@@ -73,15 +82,18 @@
             <div class="lista-trabajos">
                 <div class="trabajo">
                     <img src="img/img2.jpg" alt="imagen de trabajo realizado">
-                    <p class="parrafo-trabajo">Dale un toque de elegancia a tus manos con nuestras manicuras profesionales.</p>
+                    <p class="parrafo-trabajo">Dale un toque de elegancia a tus manos con nuestras manicuras
+                        profesionales.</p>
                 </div>
                 <div class="trabajo">
                     <img src="img/img3.png" alt="imagen de trabajo realizado">
-                    <p class="parrafo-trabajo">Expresa tu estilo a través de tus uñas. Diseños únicos para mujeres únicas.</p>
+                    <p class="parrafo-trabajo">Expresa tu estilo a través de tus uñas. Diseños únicos para mujeres
+                        únicas.</p>
                 </div>
                 <div class="trabajo">
                     <img src="img/img6.png" alt="imagen de trabajo realizado">
-                    <p class="parrafo-trabajo">Uñas impecables, confianza inigualable. Descubre la belleza en cada detalle.</p>
+                    <p class="parrafo-trabajo">Uñas impecables, confianza inigualable. Descubre la belleza en cada
+                        detalle.</p>
                 </div>
             </div>
         </section>
@@ -97,17 +109,27 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer>
+    <section>
+
         <div class="logo-whatsapp">
-            <a href="https://wa.me/+542914797785" target="_blank"><img src="img/whatsapp.png" alt="icono de whatsapp" class="img-whatsapp"></a>
+            <a href="https://wa.me/+542914797785" target="_blank"><img src="../img/whatsapp.png" alt="icono de whatsapp"
+                    class="img-whatsapp"></a>
 
         </div>
-        <div class="text-coopirygth">
-            <h4>Desarrollado por Diego Espil</h4>
-        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
         <div class="social-media">
-            <a href="https://instagram.com/pinknails_ad"><img src="img/instagram.png" alt="Instagram"></a>
+            <h5>Redes sociales</h5>
+            <ul>
+                <li>
+                    Instagram: <a href="https://www.instagram.com/pinknails_ad/">@pinknails_ad</a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="social-media-coopirygth">
+            <p>Desarrollado por Diego Espil</p>
         </div>
     </footer>
 

@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 10rem;
+    animation: opacidad 3s ease-in-out;
 }
 
 .titulo-reserva {
@@ -14,22 +16,23 @@
 
 .reserva-step {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #ffffff;
     border-radius: 10px;
     height: 20rem;
     width: 70%;
     font-size: 1.2rem;
+    margin-bottom: 3rem;
 
-    .formulario {
+    .formulario-buttons {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-    .formulario-buttons {
+    .formulario {
         display: flex;
         justify-content: center;
         align-items: center;

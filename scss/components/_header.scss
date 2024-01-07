@@ -1,13 +1,39 @@
 @import "../base/variables";
 @import "../base/maps";
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+
+}
+
 .nav-link {
     font-size: map-get($nav-link, tamanio);
     color: $color-black;
 }
 
 
+
+@keyframes logo_escalar {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 .logo {
     width: 80px;
 }
 
+.logo:hover {
+    animation: logo_escalar 2s ease-in-out infinite;
+}

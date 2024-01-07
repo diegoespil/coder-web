@@ -4,24 +4,14 @@
 /* estilos para el footer */
 
 footer {
-   @extend %footer;
+    @extend %footer;
 }
 
-.text-coopirygth {
-    h4  {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-        text-align: center;
-    }
-}
-
-.social-media {
-    img {
-        float: right;
-        margin-right: 5.2rem;
-        /* Ajusta el margen del icono */
-        margin-bottom: 30px;
-    }
+.social-media-coopirygth {
+    text-align: center;
+    font-size: 1rem;
+    height: 10rem;
+    margin-top: 2rem;
 }
 
 .img-whatsapp {
@@ -29,10 +19,20 @@ footer {
 }
 
 .logo-whatsapp {
-    display: inline-block;
+
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.social-media {
+    height: 10rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 /* fin de estilos para el footer*/

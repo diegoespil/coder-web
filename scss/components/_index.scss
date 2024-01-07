@@ -7,12 +7,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40rem;
+    height: 50rem;
+    animation: fadeIn;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 5s;
+    /* don't forget to set a duration! */
 
     h1 {
         font-size: 3rem;
         text-align: center;
     }
+
+
 }
 
 
@@ -30,13 +36,17 @@
     gap: 1rem;
 }
 
+
+
 .trabajo {
-    @include card(17.6rem,100%);
+    @include card(17.6rem, 100%);
     background-color: rgb(255, 255, 255);
+    animation: opacidad 5s ease-in-out;
+    animation: escalar_trabajo 5s ease-in-out;
 }
 
 .trabajos {
-    
+
     img {
         width: 100%;
     }
@@ -49,10 +59,13 @@
     margin: 2rem;
 }
 
+
+
 .titulo-trabajos {
     text-align: center;
     font-size: 2rem;
     margin: 2rem;
+    animation: opacidad 5s ease-in-out;
 }
 
 
@@ -61,7 +74,7 @@
 /* estilos para la ubicacion en el index*/
 
 #ubicacion {
-    
+
     h2 {
         text-align: center;
         font-size: 2rem;
