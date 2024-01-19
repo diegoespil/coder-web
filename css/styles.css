@@ -289,7 +289,6 @@ header {
 }
 
 .contacto-form {
-  width: 20em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,6 +305,10 @@ header {
   /* Altura del botón */
   padding: 10px;
   /* Relleno interno del botón */
+}
+
+#comentario {
+  resize: none;
 }
 
 /* fin estilos para la pagina de contacto */
