@@ -20,7 +20,7 @@
     align-items: center;
     background-color: #ffffff;
     border-radius: 10px;
-    height: 20rem;
+    height: 50rem;
     width: 70%;
     font-size: 1.2rem;
     margin-bottom: 3rem;
@@ -55,13 +55,20 @@
     }
 }
 
-
-.formulario-buttons .btn-enviar-reserva {
-    display: none;
+.input-custom {
+    border: 1px solid #666666;
 }
 
-.fechas-disponibles {
+.input-error {
+    border: 1px solid #b40000;
+}
+
+/* .formulario-buttons .btn-enviar-reserva {
     display: none;
+} */
+
+.fechas-disponibles {
+    //display: none;
 
     .active {
         display: flex;
@@ -70,7 +77,7 @@
 }
 
 .horarios-disponibles {
-    display: none;
+    //display: none;
 
     .active {
         display: flex;

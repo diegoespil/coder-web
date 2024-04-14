@@ -80,41 +80,66 @@
                 <div class="titulo-reserva">
                     <h1>RESERVA TU LUGAR</h1>
                 </div>
-                <div class="reserva-step">
-                    <form action="#">
-                        <div class="formulario-buttons">
-                            <div class="formulario">
-                                <label for="serv">Elegi un servicio</label>
-                                <select name="servicios" id="serv">
-                                    <option value="selecciona">Selecciona un servicio</option>
-                                    <option value="servicio_1">Servicio1</option>
-                                    <option value="servicio_2">Servicio2</option>
-                                    <option value="servicio_3">Servicio3</option>
-                                    <option value="servicio_4">Servicio4</option>
-                                </select>
-                            </div>
-                            <button type="submit" id="btn-servicios">Siguiente</button>
 
-                            <!-- fechas -->
-                            <div class="fechas-disponibles">
+                <div class="reserva-step">
+                    <form id="form-reserva" action="#">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre y apellido*:</label>
+                            <input type="text" class="form-control input-custom" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Telefono*:</label>
+                            <input type="tel" class="form-control input-custom" id="telefono" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serv">Elegi un servicio</label>
+                            <select class="form-select" required="required" name="servicios" id="serv">
+                                <option value="">Selecciona un servicio</option>
+                            </select>
+                        </div>
+
+                        <!-- fechas -->
+                        <div class="mb-3 fechas-disponibles">
+                            <label for="serv">Fechas disponibles</label>
+                            <input type="date" name="calendario" id="calendario" min="" max="" disabled required>
+                        </div>
+                        <!-- <div class="fechas-disponibles"> -->
+
+
+                        <!-- </div> -->
+                        <!-- <div class="horarios-disponibles"> -->
+                        <div class="mb-3 hora">
+                            <label for="hora">Hora</label>
+                            <!-- <input type="time" name="hora" id="hora" disabled required> -->
+                            <select name="hora" id="hora" required></select>
+                        </div>
+
+                        <!-- </div> -->
+                        <!-- <button type="submit" id="btn-servicios">Siguiente</button> -->
+
+                        <!-- fechas -->
+                        <!--  <div class="fechas-disponibles">
                                 <label for="calendario">Calendario</label>
                                 <input type="date" name="calendario" id="calendario">
                             </div>
-                            <button type="submit" id="btn-fechas">Siguiente</button>
+                            <button type="submit" id="btn-fechas">Siguiente</button> -->
 
-                            <!-- horarios -->
-                            <div class="horarios-disponibles">
+                        <!-- horarios -->
+                        <!-- <div class="horarios-disponibles">
                                 <label for="hora">Hora</label>
                                 <input type="time" name="hora" id="hora">
                             </div>
-                            <button type="submit" id="btn-horarios">Siguiente</button>
+                            <button type="submit" id="btn-horarios">Siguiente</button> -->
 
-                            <input type="submit" value="RESERVAR" class="btn-enviar-reserva" />
-                        </div>
+                        <input type="submit" value="Reservar" />
+
                     </form>
+
                 </div>
             </div>
-
+            <div id="alert-exito" style="display: none;" class="alert alert-success" role="alert">
+                Tu lugar fue reservado con exito!
+            </div>
         </section>
 
     </main>
@@ -161,6 +186,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="../js/reserva.js"></script>
 </body>
 
 </html>
