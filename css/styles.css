@@ -250,6 +250,14 @@ header {
   margin: 2rem;
 }
 
+.tabla {
+  min-height: 300px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* estilos para las preguntas frecuentes */
 #preguntas-container {
   display: flex;
@@ -337,7 +345,7 @@ footer {
 .social-media-coopirygth {
   text-align: center;
   font-size: 1rem;
-  height: 10rem;
+  height: 5rem;
   margin-top: 2rem;
 }
 
