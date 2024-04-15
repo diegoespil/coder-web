@@ -52,8 +52,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="../pages/servicios.html">Servicios</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../pages/reservas.html">Reservas</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reservas
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="../pages/reservas.html">Nueva reserva</a>
+                                        <a class="dropdown-item" href="../pages/listaReservas.html">Mis reservas</a>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="../pages/preguntas_frecuentes.html">Preguntas
@@ -77,6 +84,9 @@
         <!-- Seccion para realizar la reserva -->
         <section>
             <div class="reserva">
+                <div id="alert-exito" style="display: none;" class="alert alert-success" role="alert">
+                    Tu lugar fue reservado con exito!
+                </div>
                 <div class="titulo-reserva">
                     <h1>RESERVA TU LUGAR</h1>
                 </div>
@@ -93,53 +103,26 @@
                         </div>
                         <div class="mb-3">
                             <label for="serv">Elegi un servicio</label>
-                            <select class="form-select" required="required" name="servicios" id="serv">
+                            <select class="form-select select-custom" required="required" name="servicios" id="serv">
                                 <option value="">Selecciona un servicio</option>
                             </select>
                         </div>
-
-                        <!-- fechas -->
-                        <div class="mb-3 fechas-disponibles">
+                        <div class="mb-3">
                             <label for="serv">Fechas disponibles</label>
                             <input type="date" name="calendario" id="calendario" min="" max="" disabled required>
                         </div>
-                        <!-- <div class="fechas-disponibles"> -->
-
-
-                        <!-- </div> -->
-                        <!-- <div class="horarios-disponibles"> -->
-                        <div class="mb-3 hora">
+                        <div class="mb-3">
                             <label for="hora">Hora</label>
-                            <!-- <input type="time" name="hora" id="hora" disabled required> -->
                             <select name="hora" id="hora" required></select>
                         </div>
 
-                        <!-- </div> -->
-                        <!-- <button type="submit" id="btn-servicios">Siguiente</button> -->
-
-                        <!-- fechas -->
-                        <!--  <div class="fechas-disponibles">
-                                <label for="calendario">Calendario</label>
-                                <input type="date" name="calendario" id="calendario">
-                            </div>
-                            <button type="submit" id="btn-fechas">Siguiente</button> -->
-
-                        <!-- horarios -->
-                        <!-- <div class="horarios-disponibles">
-                                <label for="hora">Hora</label>
-                                <input type="time" name="hora" id="hora">
-                            </div>
-                            <button type="submit" id="btn-horarios">Siguiente</button> -->
-
-                        <input type="submit" value="Reservar" />
+                        <button type="submit" id="reservar">Reservar</button>
 
                     </form>
 
                 </div>
             </div>
-            <div id="alert-exito" style="display: none;" class="alert alert-success" role="alert">
-                Tu lugar fue reservado con exito!
-            </div>
+
         </section>
 
     </main>
@@ -183,9 +166,11 @@
             <p>Desarrollado por Diego Espil</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/reserva.js"></script>
 </body>
 

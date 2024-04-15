@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <title>Pink Nails AD - Contactanos</title>
+    <title>Pink Nails AD - Reserva tu lugar</title>
     <link rel="shortcut icon" href="../img/icons/favicon.ico" type="image/x-icon">
     <meta name="description"
-        content="Escribinos cualquier duda que tengas, estamos para asesorarte. Contactanos a traves del formulario o por whatsapp">
-    <meta name="keywords" content="uñas, esculpidas, soft, gel, retirado, contacto, comunicación">
+        content="Reserva tu lugar para el servicio de uñas que prefieras. Con los mejores productos del mercado, y la mejor experiencia. No esperes mas y reserva tu lugar en Pink Nails AD">
+    <meta name="keywords" content="uñas, esculpidas, soft, gel, retirado, turno, reserva, lugar, disponible">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,47 +80,28 @@
 
     <!-- Main -->
     <main>
-        <!-- Contacto -->
+        <!-- Seccion para realizar la reserva -->
         <section>
-            <div class="contacto-container">
-                <div class="contacto-titulo">
-                    <h1>DEJANOS TU MENSAJE O CONSULTA</h1>
+            <div class="lista-reserva">
+                <div class="titulo-turno">
+                    <h1>Mis turnos</h1>
                 </div>
-                <!-- <div class="contacto-parrafo">
-                    <h1>DEJANOS TU MENSAJE O CONSULTA</h1>
-                </div> -->
-                <!-- Formularip -->
-                <div class="contacto-form">
-                    <form id="form-contacto">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre y apellido*:</label>
-                            <input type="text" class="form-control" id="nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email*:</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Telefono*:</label>
-                            <input type="tel" class="form-control" id="telefono" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="comentario" class="form-label">Comentario*:</label>
-                            <textarea name="comentario" id="comentario" class="form-control" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
-
-                </div>
-
-            </div>
-            <div id="alert-exito" style="display: none;" class="alert alert-success" role="alert">
-                Su mensaje ah sido enviado, muchas gracias por contactarnos!
+                <table class="table" id="tabla-turnos">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Servicio</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
         </section>
-    </main>
 
+    </main>
     <section>
         <div class="logo-whatsapp">
             <a href="https://wa.me/+542914797785" target="_blank" rel="nofollow"><img src="../img/whatsapp.png"
@@ -128,6 +109,7 @@
 
         </div>
     </section>
+
     <!-- Footer -->
     <footer>
         <div class="container mt-4">
@@ -165,7 +147,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/contacto.js"></script>
+    <script src="../js/lista_reserva.js"></script>
 </body>
 
 </html>

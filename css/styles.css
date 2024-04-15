@@ -204,8 +204,8 @@ header {
   border: 1px solid #666666;
 }
 
-.input-error {
-  border: 1px solid #b40000;
+.select-custom {
+  border: 1px solid #666666;
 }
 
 /* .formulario-buttons .btn-enviar-reserva {
@@ -236,6 +236,20 @@ header {
 }
 
 /* fin de estilos para la seccion de reservas*/
+.lista-reserva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10rem;
+  animation: opacidad 3s ease-in-out;
+}
+
+.titulo-turno {
+  text-align: center;
+  margin: 2rem;
+}
+
 /* estilos para las preguntas frecuentes */
 #preguntas-container {
   display: flex;

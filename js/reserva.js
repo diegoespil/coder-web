@@ -8,17 +8,18 @@ class Servicio {
         this.duracion = duracion
         this.precio = precio
     }
+
 }
 
 const servicios = [
-    new Servicio(1, "servicio 1", 30, 3000),
-    new Servicio(2, "servicio 2", 30, 3000),
-    new Servicio(3, "servicio 3", 30, 3000),
-    new Servicio(4, "servicio 4", 30, 3000),
+    new Servicio(1, "Uñas esculpidas", 100, 5000),
+    new Servicio(2, "Soft gel", 130, 8000),
+    new Servicio(3, "Retirado de uñas", 20, 1000),
+    new Servicio(4, "Esmaltado", 100, 3000),
 ]
 
-const agregarServicio = (servicio) => {
-    var option = document.createElement("option");
+const crearOpcionServicio = (servicio) => {
+    let option = document.createElement("option");
     option.text = servicio.nombre;
     option.value = servicio.id;
     return option
@@ -26,20 +27,21 @@ const agregarServicio = (servicio) => {
 }
 
 servicios.forEach(servicio => {
-    const option = agregarServicio(servicio)
+    const option = crearOpcionServicio(servicio)
     select_servicios.append(option)
 
 })
 
 let data_reserva = {
+    "id_servicio": "",
     "servicio": "",
     "fecha": "",
     "hora": ""
 }
 
 select_servicios.addEventListener('change', (e) => {
-    data_reserva.servicio = e.target.value
-    console.log("servicio guardado ", data_reserva.servicio)
+    data_reserva.servicio = select_servicios.options[select_servicios.selectedIndex].text
+    data_reserva.id_servicio = e.target.value
     const value = e.target.value
     if (value !== '0') {
         document.getElementById('calendario').disabled = false
@@ -48,6 +50,43 @@ select_servicios.addEventListener('change', (e) => {
 })
 
 
+// Función para formatear una fecha en el formato deseado (d-MM-y)
+function formatDate(date) {
+    let day = date.getDate().toString().padStart(2, '0');
+    let month = (date.getMonth() + 1).toString().padStart(2, '0');
+    let year = date.getFullYear().toString().slice(-2);
+    return day + '-' + month + '-' + year;
+}
+
+// Función para generar un arreglo de horas (HH:MM) para un día dado
+function generateHours() {
+    let hours = [];
+    for (let hour = 10; hour < 19; hour++) {
+        for (let minute = 0; minute < 60; minute += 60) {
+            let hourStr = hour.toString().padStart(2, '0');
+            let minuteStr = minute.toString().padStart(2, '0');
+            hours.push(hourStr + ':' + minuteStr);
+        }
+    }
+    return hours;
+}
+
+// Función para generar un arreglo de fechas y horas para los próximos 7 días
+function generateDates() {
+    let dates = [];
+    let today = new Date();
+    for (let i = 0; i < 7; i++) {
+        let currentDate = new Date(today.getTime() + i * 24 * 60 * 60 * 1000);
+        let formattedDate = formatDate(currentDate);
+        let hours = generateHours();
+        dates.push({ date: formattedDate, hours: hours });
+    }
+    return dates;
+}
+
+// Generar el arreglo de fechas y horas para los próximos 7 días
+let datesWithHours = generateDates();
+
 
 const calendario = document.getElementById('calendario');
 let fechaActual = new Date();
@@ -55,47 +94,42 @@ calendario.min = fechaActual.toISOString().split('T')[0];
 // Establecer la fecha máxima (dentro de 7 días)
 let fechaMaxima = new Date();
 fechaMaxima.setDate(fechaActual.getDate() + 7);
-calendario.max = fechaMaxima.toISOString().split('T')[0];
+calendario.max = fechaMaxima.toISOString().split('T')[0]
+
 calendario.addEventListener('change', (e) => {
     let fecha = e.target.value
-    console.log("fecha: ", fecha)
-    data_reserva.fecha = e.target.value
-    console.log("fecha guardada ", data_reserva.fecha)
+    let date = new Date(fecha)
+    let currentDate = new Date(date.getTime() + 24 * 60 * 60 * 1000)
+    data_reserva.fecha = formatDate(currentDate)
     document.getElementById('hora').disabled = false
+    _cargarHoras(data_reserva.fecha)
 })
 
 let horaInput = document.getElementById('hora');
+const _cargarHoras = (fecha) => {
+    datesWithHours.forEach(f => {
+        if (f.date === fecha) {
+            f.hours.forEach(hora => {
+                // Crear una nueva opción y agregarla al input
+                let option = document.createElement('option');
+                option.text = hora;
+                option.value = hora;
+                horaInput.appendChild(option);
+            })
+        }
+    })
 
-// Generar opciones de horas cada media hora
-for (let hora = 10; hora <= 18; hora++) {
-    for (let minuto = 0; minuto < 60; minuto += 60) {
-        let horaStr = ('0' + hora).slice(-2); // Asegurar formato HH
-        let minutoStr = ('0' + minuto).slice(-2); // Asegurar formato MM
-        let horaCompleta = horaStr + ':' + minutoStr;
-
-        // Crear una nueva opción y agregarla al input
-        let option = document.createElement('option');
-        option.text = horaCompleta;
-        option.value = horaCompleta;
-        horaInput.appendChild(option);
-    }
 }
 
 horaInput.addEventListener('change', (e) => {
-    console.log("hora seleccionada: ", e.target.value)
     data_reserva.hora = e.target.value
-    console.log("hora guardada: ", data_reserva.hora)
 })
 
 const validarDatos = () => {
     const nombre = document.getElementById('nombre').value
     const telefono = document.getElementById('telefono').value
-    const id_servicio = select_servicios.options[select_servicios.selectedIndex].value;
-    const fecha = calendario.value;
-    console.log("nombre: ", nombre)
-    console.log("telefono: ", telefono)
-    console.log("id servicio: ", id_servicio)
-    console.log("fecha ", fecha)
+    const id_servicio = select_servicios.options[select_servicios.selectedIndex].value
+    const fecha = calendario.value
     if (nombre !== "" && telefono !== "" && id_servicio !== "" && fecha !== "")
         return true
     else
@@ -115,23 +149,43 @@ const marcarDatosFaltantes = () => {
 
 const form_reserva = document.getElementById('form-reserva');
 const alertaExito = document.getElementById('alert-exito');
+
 form_reserva.addEventListener('submit', (e) => {
     e.preventDefault();
     document.getElementById('nombre').classList.remove('is-invalid')
     document.getElementById('telefono').classList.remove('is-invalid')
     if (validarDatos()) {
-        console.log("datos validados")
-        console.log("data: ", data_reserva)
-        let data = JSON.stringify(data_reserva)
-        localStorage.setItem(document.getElementById('nombre').value, data)
+        data_reserva.hora = horaInput.options[horaInput.selectedIndex].text
+
+        _borrarHoraDisponible(data_reserva.fecha, data_reserva.hora)
+
+        localStorage.setItem("id_servicio", data_reserva.id_servicio)
+        localStorage.setItem("servicio", data_reserva.servicio)
+        localStorage.setItem("fecha", data_reserva.fecha)
+        localStorage.setItem("hora", data_reserva.hora)
+
         alertaExito.style.display = 'block'
+
+        horaInput.innerHTML = ""
+
         form_reserva.reset()
+
         setTimeout(function () {
             alertaExito.style.display = 'none';
+            alertaExito.focus()
         }, 3000);
     } else {
-        console.log("datos no validados")
         marcarDatosFaltantes()
     }
 })
+
+const _borrarHoraDisponible = (fecha, hora) => {
+    datesWithHours.forEach(f => {
+        if (f.date === fecha) {
+            f.hours = f.hours.filter((valor) => {
+                return valor !== hora
+            })
+        }
+    })
+}
 

@@ -1,0 +1,13 @@
+.lista-reserva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    animation: opacidad 3s ease-in-out;
+}
+
+.titulo-turno {
+    text-align: center;
+    margin: 2rem;
+}
