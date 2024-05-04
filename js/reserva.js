@@ -156,7 +156,6 @@ const marcarDatosFaltantes = () => {
 }
 
 const form_reserva = document.getElementById('form-reserva');
-const alertaExito = document.getElementById('alert-exito');
 
 form_reserva.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -172,7 +171,7 @@ form_reserva.addEventListener('submit', (e) => {
         localStorage.setItem("fecha", data_reserva.fecha)
         localStorage.setItem("hora", data_reserva.hora)
 
-        alertaExito.style.display = 'block'
+
 
         horaInput.innerHTML = ""
 
@@ -185,10 +184,7 @@ form_reserva.addEventListener('submit', (e) => {
             timer: 1500
         });
 
-        setTimeout(function () {
-            alertaExito.style.display = 'none';
-            alertaExito.focus()
-        }, 3000);
+
     } else {
         marcarDatosFaltantes()
     }
