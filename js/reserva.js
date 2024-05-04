@@ -1,3 +1,5 @@
+
+
 const select_servicios = document.getElementById('serv');
 
 class Servicio {
@@ -11,13 +13,6 @@ class Servicio {
 
 }
 
-const servicios = [
-    new Servicio(1, "Uñas esculpidas", 100, 5000),
-    new Servicio(2, "Soft gel", 130, 8000),
-    new Servicio(3, "Retirado de uñas", 20, 1000),
-    new Servicio(4, "Esmaltado", 100, 3000),
-]
-
 const crearOpcionServicio = (servicio) => {
     let option = document.createElement("option");
     option.text = servicio.nombre;
@@ -26,11 +21,24 @@ const crearOpcionServicio = (servicio) => {
 
 }
 
-servicios.forEach(servicio => {
-    const option = crearOpcionServicio(servicio)
-    select_servicios.append(option)
+fetch("../data.json")
+    .then(datos => {
+        if (!datos.ok) {
+            throw new Error("Error al traer los datos")
+        } else {
+            return datos.json()
+        }
+    })
+    .then(servicios => {
+        servicios.forEach(servicio => {
+            const option = crearOpcionServicio(servicio)
+            select_servicios.append(option)
+        })
+    })
+    .catch(e => {
+        console.error("Hubo un error al operar con fetch " + e.message)
+    })
 
-})
 
 let data_reserva = {
     "id_servicio": "",
@@ -169,6 +177,13 @@ form_reserva.addEventListener('submit', (e) => {
         horaInput.innerHTML = ""
 
         form_reserva.reset()
+
+        Swal.fire({
+            icon: "success",
+            title: "Turno reservado!",
+            showConfirmButton: false,
+            timer: 1500
+        });
 
         setTimeout(function () {
             alertaExito.style.display = 'none';

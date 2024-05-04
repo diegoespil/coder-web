@@ -1,0 +1,29 @@
+[
+    {
+        "nombre": "Uñas esculpidas",
+        "titulo": "Eleva tu estilo con nuestras Uñas Esculpidas",
+        "descripcion": "Sumérgete en el lujo de unas uñas esculpidas a medida. Nuestros artistas expertos transforman tus uñas en verdaderas obras de arte, creando diseños que  reflejan tu estilo único.",
+        "precio": 3000,
+        "tiempo": "02:00",
+        "imagen": "../img/uñas_esculpidas.jpg",
+        "alt": "servicio de uñas esculpidas"
+    },
+    {
+        "nombre": "Retirado de uñas",
+        "titulo": "Retirado de Uñas con Cuidado Profesional",
+        "descripcion": "Experimenta la diferencia con nuestro servicio de retirado de uñas, donde la delicadeza y la profesionalidad se unen para preservar la salud y la belleza de tus uñas naturales.",
+        "precio": 3000,
+        "tiempo": "02:00",
+        "imagen": "../img/retirado_uñas.jpg",
+        "alt": "servicio de uñas esculpidas"
+    },
+    {
+        "nombre": "Soft gel",
+        "titulo": "Suavidad y Durabilidad con Soft Gel",
+        "descripcion": "Sumérgete en la experiencia de uñas impecables con nuestro servicio de soft gel. La suavidad al tacto se combina con una durabilidad excepcional para un estilo que perdura.",
+        "precio": 3000,
+        "tiempo": "02:00",
+        "imagen": "../img/soft_gel1.jpg",
+        "alt": "servicio de soft gel"
+    }
+]
