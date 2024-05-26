@@ -1,11 +1,13 @@
 let container_servicios = document.getElementById("main-servicios");
 
-const crearCardServicio = ({ titulo, descripcion, imagen, alt }) => {
+const crearCardServicio = ({ titulo, descripcion, imagen, alt, precio, tiempo }) => {
     container_servicios.innerHTML += `
         <div class=" servicio-descripcion">
             <img src="${imagen}" alt="${alt}">
             <h2 class="titulo-servicio">${titulo}</h2>
             <p class="texto-servicio">${descripcion}</p>
+            <p>Precio: $${precio}</p>
+            <p>Duracion: ${tiempo} horas</p>
         </div>
      `
 }

@@ -81,12 +81,14 @@ function generateHours() {
 
 // Función para generar un arreglo de fechas y horas para los próximos 7 días
 function generateDates() {
+    console.log("generate dates");
     let dates = [];
     let today = new Date();
     for (let i = 0; i < 7; i++) {
         let currentDate = new Date(today.getTime() + i * 24 * 60 * 60 * 1000);
         let formattedDate = formatDate(currentDate);
         let hours = generateHours();
+
         dates.push({ date: formattedDate, hours: hours });
     }
     return dates;
@@ -94,7 +96,26 @@ function generateDates() {
 
 // Generar el arreglo de fechas y horas para los próximos 7 días
 let datesWithHours = generateDates();
+let turnos = localStorage.getItem("turnos");
+if (turnos) {
+    turnos = JSON.parse(turnos);
+    turnos.forEach(turno => {
+        let dia = turno.fecha;
+        let hora = turno.hora;
+        let encontre = false;
+        let i = 0;
+        while (!encontre && i < datesWithHours.length) {
+            let diaCargado = datesWithHours[i].date;
+            if (diaCargado === dia) {
+                const horasNuevas = datesWithHours[i].hours.filter(h => h != hora);
+                datesWithHours[i].hours = horasNuevas;
+                encontre = true;
+            }
+            i++;
+        }
+    });
 
+}
 
 const calendario = document.getElementById('calendario');
 let fechaActual = new Date();
@@ -105,6 +126,7 @@ fechaMaxima.setDate(fechaActual.getDate() + 7);
 calendario.max = fechaMaxima.toISOString().split('T')[0]
 
 calendario.addEventListener('change', (e) => {
+    _clearHours();
     let fecha = e.target.value
     let date = new Date(fecha)
     let currentDate = new Date(date.getTime() + 24 * 60 * 60 * 1000)
@@ -127,6 +149,11 @@ const _cargarHoras = (fecha) => {
         }
     })
 
+}
+const _clearHours = () => {
+    if (horaInput.childElementCount > 0) {
+        horaInput.innerHTML = '';
+    }
 }
 
 horaInput.addEventListener('change', (e) => {
@@ -165,11 +192,21 @@ form_reserva.addEventListener('submit', (e) => {
         data_reserva.hora = horaInput.options[horaInput.selectedIndex].text
 
         _borrarHoraDisponible(data_reserva.fecha, data_reserva.hora)
+        let turnos = localStorage.getItem("turnos");
+        console.log("turnos: " + turnos)
+        if (!turnos) {
+            turnos = []
+        } else {
+            turnos = JSON.parse(turnos)
+        }
 
-        localStorage.setItem("id_servicio", data_reserva.id_servicio)
+        turnos.push(data_reserva)
+
+        localStorage.setItem("turnos", JSON.stringify(turnos))
+        /* localStorage.setItem("id_servicio", data_reserva.id_servicio)
         localStorage.setItem("servicio", data_reserva.servicio)
         localStorage.setItem("fecha", data_reserva.fecha)
-        localStorage.setItem("hora", data_reserva.hora)
+        localStorage.setItem("hora", data_reserva.hora) */
 
 
 
@@ -191,11 +228,16 @@ form_reserva.addEventListener('submit', (e) => {
 })
 
 const _borrarHoraDisponible = (fecha, hora) => {
+    console.log(fecha)
+    console.log(hora)
     datesWithHours.forEach(f => {
+        console.log(f.date)
         if (f.date === fecha) {
+            console.log(f.hours)
             f.hours = f.hours.filter((valor) => {
                 return valor !== hora
             })
+            console.log(f.hours)
         }
     })
 }
